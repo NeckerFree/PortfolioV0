@@ -2,6 +2,8 @@
 
 body {
   background: #191765;
+  margin: 0 0 0 0;
+  height: 100vh;
 }
 
 .navContainer {
@@ -31,16 +33,32 @@ section {
   height: 100vh;
 }
 
-.topCircles {
+.upperCircle {
   position: absolute;
-  width: 375px;
-  height: 650px;
-  left: 0;
-  top: 50px;
-  background-image: url(../images/topCircles.png);
+  min-width: 100%;
+  height: 300px;
+  background-image: url(../images/Ellipse18.png);
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+
+.lowerCircle {
+  margin-top: 150px;
+  position: absolute;
+  min-width: 100%;
+  height: 500px;
+  background-image: url(../images/Ellipse19.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+.name {
+  margin-top: 100px;
+  height: 200px;
 }
 
 h1 {
+  height: 200px;
   color: #7d73fc;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -74,6 +92,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 300px;
 }
 
 ul {
