@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
 
 body {
-  background: #191765;
   margin: 0 0 0 0;
-  height: 100vh;
+  height: 4500px;
   display: flex;
   flex-direction: column;
+  max-width: 375px;
+}
+
+header {
+  background: #191765;
 }
 
 .navContainer {
@@ -27,7 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 1316.15px;
   background: url(../images/Ellipse18.png) left top no-repeat, url(../images/Ellipse19.png) bottom right no-repeat;
 }
 
@@ -55,6 +60,17 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+  text-align: left;
+  margin-left: 24px;
+}
+
 .paragraph {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -65,13 +81,6 @@ h2 {
   line-height: 28px;
   width: 280px;
   height: 170px;
-}
-
-.socialContent {
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 section > ul {
@@ -91,12 +100,27 @@ section > ul {
   margin: 12px 0;
 }
 
-.socialContent > ul {
+.socialContent {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.socialContent ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 250px;
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.socialContent ul li {
+  float: left;
+  padding: 2px 5px;
 }
 
 section > h2 {
@@ -145,4 +169,156 @@ li > p {
 
 .vector {
   height: 30px;
+}
+
+/* Mobile version */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  background: #191765;
+}
+
+.grid-item {
+  align-self: auto;
+  text-align: center;
+}
+
+.element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.work {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #a2a3ae;
+  padding-left: 10px;
+}
+
+.recent-work {
+  display: flex;
+  flex-direction: column;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
+  color: #9490ff;
+  width: 300px;
+  height: 104px;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 24px;
+}
+
+.page {
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page1 {
+  background: url(../images/ImgPage1.png) left no-repeat;
+  height: 800px;
+}
+
+.page2 {
+  height: 729px;
+  background: url(../images/ImgPage2.png) right no-repeat;
+}
+
+.page3 {
+  background: url(../images/ImgPage3.png) left no-repeat;
+  height: 729px;
+}
+
+.page4 {
+  background: url(../images/ImgPage4.png) right no-repeat;
+  height: 760px;
+}
+
+.imgPlace {
+  width: 327px;
+  height: 236px;
+  margin-top: 50px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+}
+
+.block p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: justify;
+  margin-left: 24px;
+  margin-right: 24px;
+  color: #dcdce8;
+}
+
+.block ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+}
+
+.block ul li {
+  text-align: center;
+  flex-grow: 1;
+  position: relative;
+  border-right: 1px solid #81818c;
+}
+
+.block ul li:last-child {
+  border-right: none;
+}
+
+.block ul li p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+}
+
+button {
+  background: #7d73fc;
+  color: #edecff;
+  width: 89px;
+  height: 48px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  margin-top: 20px;
+  margin-left: 24px;
+  border: 0;
+}
+
+button:hover {
+  box-shadow: 0 8px 16px rgba(125, 115, 252, 0.48);
+}
+
+button:active {
+  background: #5e42d7;
 }
