@@ -59,6 +59,16 @@ h2 {
   font-weight: 500;
   text-align: center;
 }
+h3{
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+line-height: 44px;
+color: #FFFFFF;
+text-align: left;
+margin-left: 24px;
+}
 
 .paragraph {
   font-family: 'Roboto', sans-serif;
@@ -175,9 +185,9 @@ li > p {
 .element {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  padding: 4px 0;
-}
+   align-items:center; 
+  justify-content: space-between;
+  }
 
 .work {
   font-family: 'Roboto', sans-serif;
@@ -187,18 +197,27 @@ li > p {
   line-height: 32px;
   text-align: center;
   color: #a2a3ae;
+  padding-left: 10px;
 }
 
 .recent-work {
+  display: flex;
+  flex-direction: column;
+ }
+
+h4 {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
   line-height: 52px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: #9490ff;
+  width: 300px;
+  height: 104px;
+  align-items:flex-start;
+  text-align: left;
+  padding-left: 24px;
+  
 }
 
 .page {
@@ -248,6 +267,7 @@ li > p {
   text-align: justify;
   margin-left: 24px;
   margin-right: 24px;
+  color: #DCDCE8;
 }
 
 .block ul {
@@ -282,7 +302,7 @@ li > p {
 
 button {
   background: #7d73fc;
-  color: #edecff;
+   color: #EDECFF;
   width: 89px;
   height: 48px;
   font-family: 'Roboto', sans-serif;
@@ -292,8 +312,12 @@ button {
   line-height: 24px;
   margin-top: 20px;
   margin-left: 24px;
+  border: 0;
 }
 
 button:hover {
   box-shadow: 0 8px 16px rgba(125, 115, 252, 0.48);
+}
+button:active{
+  background: #5E42D7; 
 }
