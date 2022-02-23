@@ -302,6 +302,7 @@ li > p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .formContent p {
@@ -362,6 +363,7 @@ form {
 input {
   height: 4em;
   width: 327px;
+  padding-left: 22px;
 }
 
 input:focus {
@@ -390,12 +392,15 @@ input:focus {
 }
 
 .area {
-  width: 327px;
+  width: 330px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 24px;
+  resize: none;
+  padding-left: 22px;
+  padding-top: 15px;
 }
 
 .area::placeholder {
