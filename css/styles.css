@@ -24,7 +24,7 @@ body {
 .sectionContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:stretch;
   height: 1316.15px;
   background: url(../images/Ellipse18.png) left top no-repeat, url(../images/Ellipse19.png) bottom right no-repeat;
 }
@@ -74,6 +74,7 @@ h4 {
   align-items: flex-start;
   text-align: left;
   padding-left: 24px;
+  text-transform:uppercase;
 }
 
 h5 {
@@ -85,7 +86,18 @@ h5 {
   color: #9390ff;
   text-align: center;
 }
-
+.h5Lets{
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .h5Contact{
+    display: none;
+  }
+  .h5Lets{
+    display: inline;
+  }
+ 
+}
 .paragraph {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -97,6 +109,9 @@ h5 {
 
   /* width: 280px; */
   height: 170px;
+}
+.imgWide, .imgPlaceWide{
+  display: none;
 }
 
 section > ul {
@@ -123,7 +138,25 @@ section > ul {
   flex-direction: column;
   align-items: center;
   text-align: center;
+ 
 }
+@media screen and (min-width: 700px) {
+  .socialContent {
+    justify-content:space-around;
+    display: flex;
+    flex-direction: row;
+ }
+ h4{
+   text-transform: none;
+ }
+ .imgNarrow, .imgPlace{
+   display: none;
+ }
+ .imgWide, .imgPlaceWide{
+   display: inline;
+ }
+}
+
 
 .socialContent ul {
   display: flex;
@@ -176,9 +209,7 @@ li > p {
   flex-direction: row;
   height: 700px;
   margin-left: 70px;
-
-  /* width: 303px; */
-  justify-content: left;
+  justify-content: center;
 }
 
 .box {
@@ -208,7 +239,15 @@ li > p {
   align-items: center;
   justify-content: space-between;
 }
-
+.firstElement{
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .firstElement{
+    display: flex;
+  }
+  
+}
 .work {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -218,6 +257,7 @@ li > p {
   text-align: center;
   color: #a2a3ae;
   padding-left: 10px;
+  padding-right: 10px;
 }
 
 .recent-work {
@@ -229,26 +269,44 @@ li > p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 88px 88px ;
 }
-
+@media screen and (min-width: 700px) {
+  .page1 {
+    flex-direction: row;
+  
+  }
+  .page3 {
+    flex-direction: row;
+   
+  }
+  .page2 {
+    flex-direction: row-reverse;
+  
+  }
+  .page4 {
+    flex-direction: row-reverse;
+   
+  }
+}
 .page1 {
   background: url(../images/ImgPage1.png) left no-repeat;
-  height: 800px;
+  /* height: 800px; */
 }
 
 .page2 {
-  height: 800px;
+  /* height: 800px; */
   background: url(../images/ImgPage2.png) right no-repeat;
 }
 
 .page3 {
   background: url(../images/ImgPage3.png) left no-repeat;
-  height: 800px;
+  /* height: 800px; */
 }
 
 .page4 {
   background: url(../images/ImgPage4.png) right no-repeat;
-  height: 800px;
+  /* height: 800px; */
 }
 
 .imgPlace {
@@ -275,6 +333,16 @@ li > p {
   margin-right: 24px;
   color: #dcdce8;
 }
+@media screen and (min-width: 700px) {
+  .block p {
+    font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 28px;
+color: #DFE1E6;
+  }
+}
 
 .block ul {
   margin: 0;
@@ -285,7 +353,11 @@ li > p {
   align-items: center;
   height: 50px;
 }
-
+@media screen and (min-width: 700px) {
+  .block ul{
+    align-items: flex-start;
+  }
+}
 .block ul li {
   text-align: center;
   flex-grow: 1;
@@ -341,6 +413,14 @@ button {
   margin-left: 24px;
   border: 0;
 }
+button::before{
+  content: 'See Project';
+}
+@media screen and (min-width: 700px) {
+  button::before{
+    content: 'Send';
+  }
+}
 
 button:hover {
   box-shadow: 0 8px 16px rgba(125, 115, 252, 0.48);
@@ -365,6 +445,7 @@ input {
   width: 327px;
   padding-left: 22px;
 }
+
 
 input:focus {
   color: #191765;
@@ -402,7 +483,11 @@ input:focus {
   padding-left: 22px;
   padding-top: 15px;
 }
-
+@media screen and (min-width: 700px) {
+  input, .area {
+    width: 684px;
+  }
+}
 .area::placeholder {
   color: #81818c;
 }
@@ -440,4 +525,31 @@ footer {
   align-items: center;
   text-align: center;
   margin: 30px 0 30px 0;
+}
+.socialLinks {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  text-align: center; */
+ 
+}
+.socialLinks ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.socialLinks ul li {
+  /* float: left; */
+  padding: 2px 5px;
+}
+@media screen and (min-width: 700px) {
+  .socialLinks {
+    flex-direction: row;
+ }
 }

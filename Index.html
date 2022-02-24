@@ -99,6 +99,10 @@
                     <img src="./images/Vector4.png" alt="vector">
                 </div>
                 <div class="socialContent">
+                    <div class="element firstElement">
+                        <p class="work">Work</p>
+                        <img src="./images/arrow.png" alt="arrow" >
+                    </div>
                     <ul>
                         <li><a href="#"><img src="./icons/github.png" alt="github icon"></a></li>
                         <li><a href="#"><img src="./icons/linkedIn.png" alt="linkedIn icon"></a></li>
@@ -106,7 +110,7 @@
                         <li><a href="#"><img src="./icons/twitter.png" alt="twitter icon"></a></li>
                         <li><a href="#"><img src="./icons/medium.png" alt="medium icon"></a></li>
                     </ul>
-                    <div class="element">
+                    <div class="element secondElement">
                         <img src="./images/arrow.png" alt="arrow" >
                         <p class="work">Work</p>
                     </div>
@@ -115,13 +119,15 @@
             </section>
         </div>
         <section class="grid-item recent-work">
-            <h4>MY RECENT WORK</h4>
+            <h4>My recent work</h4>
                      <div class="grid-container frame47">
                         <div class="vector">
-                            <img src="./images/Vector4.png" alt="vector">
+                            <img class="imgNarrow" src="./images/Vector4.png" alt="vector">
+                            <img class="imgWide" src="./images/Vector4_Wide.png" alt="vector">
                         </div>
                 <div class="grid-item page page1">
                     <img class="imgPlace" src="./images/ImgPlaceholder.png" alt="PlaceHolder">
+                    <img class="imgPlaceWide" src="./images/ImgPlaceholder_wide.png" alt="PlaceHolder">
                     <div class="block">
                         <h3>Multi-Post Stories</h3>
                         <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the
@@ -145,7 +151,9 @@
                         <button type="submit"  >  See Project</button>
                     </div>
                 </div>
-                <div class="grid-item page page2"> <img class="imgPlace" src="./images/ImgPlaceholder.png" alt="PlaceHolder">
+                <div class="grid-item page page2"> 
+                    <img class="imgPlace" src="./images/ImgPlaceholder.png" alt="PlaceHolder">
+                    <img class="imgPlaceWide" src="./images/ImgPlaceholder_wide.png" alt="PlaceHolder">
                     <div class="block">
                         <h3>Multi-Post Stories</h3>
                         <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the
@@ -170,7 +178,8 @@
                     </div></div>
                 <div class="grid-item page page3"> 
                     <img class="imgPlace" src="./images/ImgPlaceholder.png" alt="PlaceHolder">
-                    <div class="block">
+                    <img class="imgPlaceWide" src="./images/ImgPlaceholder_wide.png" alt="PlaceHolder">
+                   <div class="block">
                         <h3>Multi-Post Stories</h3>
                         <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the
                             industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.
@@ -192,7 +201,9 @@
                     
                         <button type="submit">See Project</button>
                     </div></div>
-                <div class="grid-item page page4"> <img class="imgPlace" src="./images/ImgPlaceholder.png" alt="PlaceHolder">
+                <div class="grid-item page page4"> 
+                    <img class="imgPlace" src="./images/ImgPlaceholder.png" alt="PlaceHolder">
+                    <img class="imgPlaceWide" src="./images/ImgPlaceholder_wide.png" alt="PlaceHolder">
                     <div class="block">
                         <h3>Multi-Post Stories</h3>
                         <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the
@@ -219,23 +230,25 @@
             </div>
         </section>
         <section class="grid-item formContent">
-            <h5>CONTACT US</h5>
+            <h5 class="h5Contact">CONTACT US</h5>
+            <h5 class="h5Lets">Let's chat!</h5>
             <p>If you have an application you are interested in developing, a feature
                 that you need built or a project that needs coding. I'd love to help with it </p>
             <form action="https://formspree.io/f/mrgjqdpe" method="post">
                     <input class="textInput" type="text" name="name" placeholder="Enter your name" maxlength="30" required>
                     <input class="emailInput" type="email" name="email" placeholder="Enter your email" required>
                     <textarea class="area" name="comment" rows="7" cols="25" maxlength="500" placeholder="Enter your text here" required></textarea>
-                  <button type="submit">See Project</button>
+                  <button type="submit"></button>
             </form>
         </section>
     </div>
     <footer>
-        
-        <div class="socialContent">
-            <div class="vector">
-                <img src="./images/Vector4.png" alt="vector">
-            </div>
+        <div class="vector">
+            <img class="imgNarrow" src="./images/Vector4.png" alt="vector">
+            <img class="imgWide" src="./images/Vector4_Wide.png" alt="vector">
+        </div>
+        <div class="socialLinks">
+           
             <ul>
                 <li><a href="#"><img src="./icons/github.png" alt="github icon"></a></li>
                 <li><a href="#"><img src="./icons/linkedIn.png" alt="linkedIn icon"></a></li>
@@ -243,10 +256,11 @@
                 <li><a href="#"><img src="./icons/twitter.png" alt="twitter icon"></a></li>
                 <li><a href="#"><img src="./icons/medium.png" alt="medium icon"></a></li>
             </ul>
+            <div  class="sendEmail">
+                <a class="emailRef" href="#">elio.cortes3000@gmail.com</a>
+             </div>
        </div>
-       <div  class="sendEmail">
-           <a class="emailRef" href="#">elio.cortes3000@gmail.com</a>
-        </div>
+       
         <div class="shape">
             <img src="./images/Shape.png" alt="shape">
         </div>
