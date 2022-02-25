@@ -646,3 +646,19 @@ footer {
     background: #9390ff;
   }
 }
+
+.containerSkils{
+display: inline;
+}
+.firstSkill{
+float: left;
+}
+.secondSkill{
+  float: left;
+}
+.thirdSkill{
+ 
+}
+.fourSkill{
+ 
+}
