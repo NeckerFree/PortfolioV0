@@ -11,18 +11,22 @@
 
 <body>
     <header>
-        <nav>
-            <div class="navContainer">
-                <a href="#"><span class="nick">Elio Nel</span></a>
-                <img src="./icons/IconMenu.png" alt="menu icon">
-            </div>
+        <nav class="navContainer">
+                 <a href="#"><span class="nick">Elio Nel</span></a>
+                <img class="hamburguer" src="./icons/IconMenu.png" alt="menu icon">
+                <ul class="menu">
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#"><img src="./icons/message.png" alt="msg icon"></a></li>
+                </ul>
         </nav>
     </header>
     <div class="grid-container">
-        <div class="grid-item">
+         <div class="grid-item gridItem0">
             <section class="sectionContainer">
                 <h1>Elio Cortés</h1>
-                <div>
+                 <div>
                     <h2>Software Developer</h2>
                 </div>
 
@@ -125,7 +129,8 @@
                             <img class="imgNarrow" src="./images/Vector4.png" alt="vector">
                             <img class="imgWide" src="./images/Vector4_Wide.png" alt="vector">
                         </div>
-                <div class="grid-item page page1">
+                <div class="grid-item gridItem1">
+                    <div class="page page1">
                     <img class="imgPlace" src="./images/ImgPlaceholder.png" alt="PlaceHolder">
                     <img class="imgPlaceWide" src="./images/ImgPlaceholder_wide.png" alt="PlaceHolder">
                     <div class="block">
@@ -151,80 +156,113 @@
                         <button type="submit"  >  See Project</button>
                     </div>
                 </div>
-                <div class="grid-item page page2"> 
-                    <img class="imgPlace" src="./images/ImgPlaceholder.png" alt="PlaceHolder">
-                    <img class="imgPlaceWide" src="./images/ImgPlaceholder_wide.png" alt="PlaceHolder">
-                    <div class="block">
-                        <h3>Multi-Post Stories</h3>
-                        <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the
-                            industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.
-                        </p>
-                        <ul>
-                            <li>
-                                <a href="#"><p>CSS</p></a>
-                            </li>
-                            <li>
-                                <a href="#"><p>html</p></a>
-                            </li>
-                            <li>
-                                <a href="#"><p>bootstrap</p></a>
-                            </li>
-                            <li>
-                                <a href="#"><p>Ruby</p></a>
-                            </li>
-                        </ul>
-                    
-                        <button type="submit">See Project</button>
-                    </div></div>
-                <div class="grid-item page page3"> 
-                    <img class="imgPlace" src="./images/ImgPlaceholder.png" alt="PlaceHolder">
-                    <img class="imgPlaceWide" src="./images/ImgPlaceholder_wide.png" alt="PlaceHolder">
-                   <div class="block">
-                        <h3>Multi-Post Stories</h3>
-                        <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the
-                            industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.
-                        </p>
-                        <ul>
-                            <li>
-                                <a href="#"><p>CSS</p></a>
-                            </li>
-                            <li>
-                                <a href="#"><p>html</p></a>
-                            </li>
-                            <li>
-                                <a href="#"><p>bootstrap</p></a>
-                            </li>
-                            <li>
-                                <a href="#"><p>Ruby</p></a>
-                            </li>
-                        </ul>
-                    
-                        <button type="submit">See Project</button>
-                    </div></div>
-                <div class="grid-item page page4"> 
-                    <img class="imgPlace" src="./images/ImgPlaceholder.png" alt="PlaceHolder">
-                    <img class="imgPlaceWide" src="./images/ImgPlaceholder_wide.png" alt="PlaceHolder">
-                    <div class="block">
-                        <h3>Multi-Post Stories</h3>
-                        <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the
-                            industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.
-                        </p>
-                        <ul>
-                            <li>
-                                <a href="#"><p>CSS</p></a>
-                            </li>
-                            <li>
-                                <a href="#"><p>html</p></a>
-                            </li>
-                            <li>
-                                <a href="#"><p>bootstrap</p></a>
-                            </li>
-                            <li>
-                                <a href="#"><p>Ruby</p></a>
-                            </li>
-                        </ul>
-                    
-                        <button type="submit">See Project</button>
+                </div>
+                <div class="grid-item gridItem2">
+                    <div class="page page2">
+                        <img class="imgPlace" src="./images/ImgPlaceholder.png" alt="PlaceHolder">
+                        <img class="imgPlaceWide" src="./images/ImgPlaceholder_wide.png" alt="PlaceHolder">
+                        <div class="block">
+                            <h3>Multi-Post Stories</h3>
+                            <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.
+                            </p>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>CSS</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>html</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>bootstrap</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>Ruby</p>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                            <button type="submit">See Project</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item gridItem3">
+                    <div class="page page3">
+                        <img class="imgPlace" src="./images/ImgPlaceholder.png" alt="PlaceHolder">
+                        <img class="imgPlaceWide" src="./images/ImgPlaceholder_wide.png" alt="PlaceHolder">
+                        <div class="block">
+                            <h3>Multi-Post Stories</h3>
+                            <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.
+                            </p>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>CSS</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>html</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>bootstrap</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>Ruby</p>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                            <button type="submit">See Project</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item gridItem4">
+                    <div class="page page4">
+                        <img class="imgPlace" src="./images/ImgPlaceholder.png" alt="PlaceHolder">
+                        <img class="imgPlaceWide" src="./images/ImgPlaceholder_wide.png" alt="PlaceHolder">
+                        <div class="block">
+                            <h3>Multi-Post Stories</h3>
+                            <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the
+                                industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.
+                            </p>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p>CSS</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>html</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>bootstrap</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p>Ruby</p>
+                                    </a>
+                                </li>
+                            </ul>
+                
+                            <button type="submit">See Project</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -238,7 +276,7 @@
                     <input class="textInput" type="text" name="name" placeholder="Enter your name" maxlength="30" required>
                     <input class="emailInput" type="email" name="email" placeholder="Enter your email" required>
                     <textarea class="area" name="comment" rows="7" cols="25" maxlength="500" placeholder="Enter your text here" required></textarea>
-                  <button type="submit"></button>
+                  <button class="submitButton" type="submit"></button>
             </form>
         </section>
     </div>
@@ -248,7 +286,6 @@
             <img class="imgWide" src="./images/Vector4_Wide.png" alt="vector">
         </div>
         <div class="socialLinks">
-           
             <ul>
                 <li><a href="#"><img src="./icons/github.png" alt="github icon"></a></li>
                 <li><a href="#"><img src="./icons/linkedIn.png" alt="linkedIn icon"></a></li>
