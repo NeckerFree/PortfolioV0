@@ -4,6 +4,7 @@
 body {
   margin: 0;
   background: #191765;
+  min-width: min-content; 
 }
 
 .navContainer {
@@ -128,7 +129,8 @@ h4 {
   line-height: 52px;
   color: #9490ff;
   align-items: flex-start;
-  text-align: left;
+
+  /* text-align: left; */
   padding-left: 24px;
   text-transform: uppercase;
 }
@@ -154,10 +156,20 @@ h5 {
   font-weight: normal;
   font-size: 20px;
   color: #c8c8d4;
-  text-align: center;
+  text-align: justify;
   line-height: 28px;
+  align-self: auto;
   padding-left: 150px;
   padding-right: 150px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.pContent {
+  margin-left: 24px;
+  margin-right: 24px;
+  align-self: auto;
+  text-align: center;
 }
 
 .imgWide,
@@ -194,7 +206,8 @@ section > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 180px;
+
+  /* width: 180px; */
   list-style: none;
   margin: 0;
 }
@@ -220,6 +233,8 @@ li > p {
   margin-left: 70px;
   justify-content: left;
   width: 250px;
+
+  /* width: 380px; */
 }
 
 .box {
@@ -230,6 +245,7 @@ li > p {
 
 .vector {
   height: 30px;
+  text-align: center;
 }
 
 /* Mobile version */
@@ -457,11 +473,7 @@ input:focus {
 }
 
 footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100px;
-  justify-content: center;
+  display: inline;
 }
 
 .emailRef {
@@ -564,10 +576,6 @@ footer {
     display: inline;
   }
 
-  .experience {
-    width: 380px;
-  }
-
   .firstElement {
     display: flex;
   }
@@ -644,5 +652,9 @@ footer {
 
   button {
     background: #9390ff;
+  }
+
+  .experience {
+    width: auto;
   }
 }
