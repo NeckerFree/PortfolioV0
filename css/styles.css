@@ -379,6 +379,18 @@ li > p {
   top: 59px;
 }
 
+label {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #f5f5ff;
+  margin-top: 20px;
+  margin-left: 0;
+}
+
 .block ul li p {
   font-family: 'Inter', sans-serif;
   font-style: normal;
@@ -446,7 +458,6 @@ input:focus {
 }
 
 .emailInput {
-  margin: 24px 0 24px 0;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -631,6 +642,18 @@ footer {
   input,
   .area {
     width: 684px;
+  }
+
+  label {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #f5f5ff;
+    margin-top: 20px;
+    margin-left: 0;
   }
 
   .socialLinks {
