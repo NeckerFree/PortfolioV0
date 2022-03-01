@@ -388,7 +388,7 @@ label {
   text-align: center;
   color: #f5f5ff;
   margin-top: 20px;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 .block ul li p {
@@ -644,7 +644,7 @@ footer {
   .area {
     width: 684px;
   }
-  
+
   label {
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -654,9 +654,9 @@ footer {
     text-align: center;
     color: #f5f5ff;
     margin-top: 20px;
-    margin-left: 0px;
+    margin-left: 0;
   }
-  
+
   .socialLinks {
     flex-direction: row;
     justify-content: center;
