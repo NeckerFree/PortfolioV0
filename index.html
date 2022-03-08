@@ -6,25 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="./js/scriptCode.js">
+    </script>
     <title>Portfolio</title>
 </head>
 
 <body>
     <header>
-        <nav class="navContainer">
-                 <a href="#"><span class="nick">Elio Nel</span></a>
-                <img class="hamburguer" src="./icons/IconMenu.png" alt="menu icon">
+        <div id="brand"><a href="#"><span class="nick">Elio Nel</span></a></div>
+        <nav >
                 <ul class="menu">
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#"><img src="./icons/message.png" alt="message icon"></a></li>
                 </ul>
+               
         </nav>
+        <div id="hamburguerLink" onclick="togleMobile(this)">
+            <a  href="#"><img class="hamburguer" src="./icons/IconMenu.png" alt="menu icon"></a>
+            <ul class="menu_mobile">
+               <li><a href="#portfolio">Portfolio <img src="./icons/RightArrow.png" alt="right arrow"></a> </li>
+                <li><a href="#about">About <img src="./icons/RightArrow.png" alt="right arrow"></a></li>
+                <li><a href="#contact">Contact <img src="./icons/RightArrow.png" alt="right arrow"></a></li>
+            </ul> 
+        </div>  
     </header>
     <div class="grid-container">
          <div class="grid-item gridItem0">
-            <section class="sectionContainer">
+            <section id="about" class="sectionContainer ">
                 <h1>Elio Cortés</h1>
                  <div>
                     <h2 class="profession">Software Developer</h2>
@@ -39,7 +49,7 @@
                 <div class="vector">
                     <img src="./images/Vector4.png" alt="underline image">
                 </div>
-                <article class="experience">
+                <article id="portfolio" class="experience">
                     <section class="box">
                         <h2>Language</h2>
                         <ul>
@@ -267,7 +277,7 @@
                 </div>
             </div>
         </section>
-        <section class="grid-item formContent">
+        <section  id="contact" class="grid-item formContent">
             <h5 class="h5Contact">CONTACT US</h5>
             <h5 class="h5Lets">Let's chat!</h5>
             <p>If you have an application you are interested in developing, a feature
