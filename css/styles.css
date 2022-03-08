@@ -21,6 +21,9 @@ header {
   display: flex;
   align-items: center;
 }
+.hideBrand {
+  display: none;
+}
 
 .nick {
   font-family: 'Roboto', sans-serif;
