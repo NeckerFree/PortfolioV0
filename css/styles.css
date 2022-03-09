@@ -193,8 +193,6 @@ h4 {
   line-height: 52px;
   color: #9490ff;
   align-items: flex-start;
-
-  /* text-align: left; */
   padding-left: 24px;
   text-transform: uppercase;
 }
@@ -212,6 +210,7 @@ h5 {
 .h5Lets {
   display: none;
 }
+
 h6{
   font-family: 'Roboto', sans-serif;
 font-style: normal;
@@ -221,6 +220,7 @@ line-height: 28px;
 display: flex;
 color: #FFFFFF;
 }
+
 .paragraph {
   margin-top: 80px;
   font-family: 'Roboto', sans-serif;
@@ -276,8 +276,6 @@ section > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
-  /* width: 180px; */
   list-style: none;
   margin: 0;
 }
@@ -303,8 +301,6 @@ li > p {
   margin-left: 70px;
   justify-content: left;
   width: 250px;
-
-  /* width: 380px; */
 }
 
 .box {
@@ -361,8 +357,6 @@ li > p {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  /* margin: 88px 142px 88px 142px; */
 }
 
 .gridItem1 {
@@ -444,10 +438,6 @@ li > p {
   line-height: 24px;
   text-align: center;
   color: #f5f5ff;
-
-  /* margin: 0 24px 0 30px; */
-
-  /* width: 340px; */
   height: 105px;
   top: 59px;
 }
@@ -599,43 +589,14 @@ footer {
 
 #hamburguerLink ul {
   list-style: none;
-
-  /* height: 106%; */
 }
 /*Details Popup*/
-/* .popup{
-position: absolute;
-display:none;
-top: 50px;
-margin-left: 100px;
-margin-right: 100px;
- left: 500px;
-width: 1156px;
-height: 1176px; 
-width: 70%;
-background-color:#9390ff; 
-z-index:9999;
-} */
 .popupContent{
  position: fixed;
  left: 25%;
- /* width: 50%; */
  z-index:9999;
 }
-/* .close{
-position: absolute;
-cursor: pointer;
-color: white;
-}  */
-/*Modal Popup*/
-/* .modal{
-  width: 327px;
-  height: 837px;
-  left: 24px;
-  top: 51px;
-} */
 .detailsContainer{
-  /* background: rgba(255, 255, 255, 0.16); */
   background: #191765;
   border: 1px solid #FFFFFF;
   box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08); 
@@ -647,9 +608,9 @@ color: white;
   display: flex;
   justify-content: space-between;
   width: 90%;
-  /* padding: 10px 10px 10px 10px ; */
   margin-left: 30px;
 }
+
 .close{
   padding: 8px;
 position: static;
@@ -664,9 +625,8 @@ margin: 15px 15px;
   background: url(../images/SnapshootPortfolio.png) no-repeat;
   width: 279px;
   height: 181px;
-  /* left: calc(50% - 279px/2);
-  top: 106px; */
 }
+
 .supportingText p{
   font-family: 'Roboto', sans-serif;
 font-style: normal;
@@ -677,20 +637,20 @@ text-align: center;
 color: #FFFFFF;
 margin: 24px 24px;
 }
+
 .tags ul {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .tags ul li {
   text-align: center;
-  /* flex-grow: 1;
-  position: relative; */
   border-right: 1px solid #81818c;
   padding: 0px 10px 0px 10px;
- 
 }
+
 .tags ul li a p{
   font-family: 'Poppins', sans-serif;
 font-style: normal;
