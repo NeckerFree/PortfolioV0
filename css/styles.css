@@ -5,12 +5,23 @@ body {
   margin: 0;
   background: #191765;
   min-width: min-content;
+  font-family: 'Roboto', sans-serif;
 }
 
-.navContainer {
+header {
+  height: 50px;
   display: flex;
   justify-content: space-between;
+  width: 90%;
+}
+
+#brand {
+  display: flex;
   align-items: center;
+}
+
+.hideBrand {
+  display: none;
 }
 
 .nick {
@@ -27,12 +38,23 @@ body {
   margin-right: 12.12px;
 }
 
+#hamburguerLink {
+  margin: auto 0;
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
 }
 
 .menu {
   display: none;
+}
+
+ul {
+  list-style: none;
+
+  /* height: 100%; */
 }
 
 .menu li a {
@@ -44,8 +66,50 @@ a {
   color: #fff;
 }
 
-li {
-  list-style: none;
+.menu_mobile li a {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #edecff;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.menu_mobile {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 65%;
+  right: 0;
+}
+
+.open .menu_mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #191765;
+  background-image: url(../images/MobileMenuLeft.png), url(../images/MobileMenuRight.png);
+  background-position: left top, right bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.hamburg {
+  content: url("../icons/x.png");
+  margin-right: 20px;
+  padding-top: 12px;
+}
+
+.menu_mobile li {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 40px;
+  padding-left: 0;
+  margin-top: 35px;
 }
 
 .sectionContainer {
@@ -159,8 +223,9 @@ h5 {
   text-align: justify;
   line-height: 28px;
   align-self: auto;
-  padding-left: 150px;
-  padding-right: 150px;
+
+  /* padding-left: 150px;
+  padding-right: 150px; */
   margin-left: 24px;
   margin-right: 24px;
 }
@@ -291,7 +356,8 @@ li > p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 88px 142px 88px 142px;
+
+  /* margin: 88px 142px 88px 142px; */
 }
 
 .gridItem1 {
@@ -373,8 +439,10 @@ li > p {
   line-height: 24px;
   text-align: center;
   color: #f5f5ff;
-  margin: 0 24px 0 30px;
-  width: 340px;
+
+  /* margin: 0 24px 0 30px; */
+
+  /* width: 340px; */
   height: 105px;
   top: 59px;
 }
@@ -524,9 +592,15 @@ footer {
   align-items: center;
 }
 
+#hamburguerLink ul {
+  list-style: none;
+
+  /* height: 106%; */
+}
+
 /* Media Query CSS */
 @media screen and (min-width: 992px) {
-  .hamburguer {
+  #hamburguerLink {
     display: none;
   }
 
