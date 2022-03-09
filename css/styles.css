@@ -9,18 +9,17 @@ body {
 }
 
 header {
-  padding: 0 20px;
   height: 50px;
   display: flex;
   justify-content: space-between;
-
-  /* align-items: center; */
+  width: 90%;
 }
 
 #brand {
   display: flex;
   align-items: center;
 }
+
 .hideBrand {
   display: none;
 }
@@ -54,7 +53,8 @@ a {
 
 ul {
   list-style: none;
-  height: 100%;
+
+  /* height: 100%; */
 }
 
 .menu li a {
@@ -76,15 +76,16 @@ ul {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .menu_mobile {
   display: none;
   position: absolute;
-  top: 50px;
-  left: 0;
-  height: calc(100vh - 50px);
   width: 100%;
+  height: 65%;
+  right: 0;
 }
 
 .open .menu_mobile {
@@ -99,16 +100,16 @@ ul {
 
 .hamburg {
   content: url("../icons/x.png");
-  padding-right: 17px;
+  margin-right: 20px;
   padding-top: 12px;
 }
 
 .menu_mobile li {
   display: flex;
   justify-content: space-between;
-  padding-right: 80px;
+  padding-right: 40px;
   padding-left: 0;
-  margin-top: 50px;
+  margin-top: 35px;
 }
 
 .sectionContainer {
@@ -222,8 +223,9 @@ h5 {
   text-align: justify;
   line-height: 28px;
   align-self: auto;
-  padding-left: 150px;
-  padding-right: 150px;
+
+  /* padding-left: 150px;
+  padding-right: 150px; */
   margin-left: 24px;
   margin-right: 24px;
 }
@@ -354,7 +356,8 @@ li > p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 88px 142px 88px 142px;
+
+  /* margin: 88px 142px 88px 142px; */
 }
 
 .gridItem1 {
@@ -436,8 +439,10 @@ li > p {
   line-height: 24px;
   text-align: center;
   color: #f5f5ff;
-  margin: 0 24px 0 30px;
-  width: 340px;
+
+  /* margin: 0 24px 0 30px; */
+
+  /* width: 340px; */
   height: 105px;
   top: 59px;
 }
@@ -589,7 +594,8 @@ footer {
 
 #hamburguerLink ul {
   list-style: none;
-  height: 106%;
+
+  /* height: 106%; */
 }
 
 /* Media Query CSS */
