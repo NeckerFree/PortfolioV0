@@ -75,4 +75,3 @@ button1.addEventListener('click', showPopup.bind(null,1), false);
 button2.addEventListener('click', showPopup.bind(null,2), false);
 button3.addEventListener('click', showPopup.bind(null,3), false);
 button4.addEventListener('click', showPopup.bind(null,4), false);
-// closeButton.addEventListener('click',closePopup);
