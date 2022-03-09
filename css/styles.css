@@ -212,7 +212,15 @@ h5 {
 .h5Lets {
   display: none;
 }
-
+h6{
+  font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 28px;
+display: flex;
+color: #FFFFFF;
+}
 .paragraph {
   margin-top: 80px;
   font-family: 'Roboto', sans-serif;
@@ -223,9 +231,6 @@ h5 {
   text-align: justify;
   line-height: 28px;
   align-self: auto;
-
-  /* padding-left: 150px;
-  padding-right: 150px; */
   margin-left: 24px;
   margin-right: 24px;
 }
@@ -597,7 +602,116 @@ footer {
 
   /* height: 106%; */
 }
+/*Details Popup*/
+.popup{
+position: absolute;
+display:none;
+top: 50px;
+margin-left: 100px;
+margin-right: 100px;
+/* left: 500px;
+width: 1156px;
+height: 1176px; */
+width: 70%;
+background-color:#9390ff;
+z-index:9999;
 
+
+}
+.popupContent{
+  background-color: red;
+  margin-left: auto;
+margin-right: auto;
+}
+.close{
+position: absolute;
+cursor: pointer;
+color: black;
+}
+/*Modal Popup*/
+/* .modal{
+  width: 327px;
+  height: 837px;
+  left: 24px;
+  top: 51px;
+} */
+.detailsContainer{
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  /* padding: 10px 10px 10px 10px ; */
+  margin-left: 30px;
+}
+.close{
+  padding: 8px;
+position: static;
+width: 20px;
+height: 20px;
+right: 0px;
+top: calc(50% - 40px/2 - 9px);
+border-radius: 8px;
+margin: 15px 15px;
+}
+.snapshoot{
+  background: url(../images/SnapshootPortfolio.png) no-repeat;
+  width: 279px;
+  height: 181px;
+  /* left: calc(50% - 279px/2);
+  top: 106px; */
+}
+.supportingText p{
+  font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+color: #FFFFFF;
+margin: 24px 24px;
+}
+.tags ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tags ul li {
+  text-align: center;
+  /* flex-grow: 1;
+  position: relative; */
+  border-right: 1px solid #81818c;
+  padding: 0px 10px 0px 10px;
+ 
+}
+.tags ul li a p{
+  font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 20px;
+color: #FFFFFF;
+}
+
+.tags ul li:last-child {
+  border-right: none;
+}
+.buttons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.buttons button{
+  width: auto;
+}
 /* Media Query CSS */
 @media screen and (min-width: 992px) {
   #hamburguerLink {
@@ -753,5 +867,49 @@ footer {
 
   .experience {
     width: auto;
+  }
+  /*Modal Popup Media Query*/
+.modal{
+  /* width: 1156px;
+  height: 1176px; 
+  top:25%;
+  left:25%; */
+  margin-left: auto;
+margin-right: auto;
+  }
+  .detailsContainer{
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08);
+  }
+  .snapshoot{
+    background: url(../images/SnapshootPortfolio_Wide.png) no-repeat;
+    width: 1108px;
+    height: 505px;
+  }
+  h6{
+ font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 500;
+font-size: 40px;
+line-height: 32px;
+display: flex;
+align-items: center;
+color: #FFFFFF;
+  }
+  .supportingText p{
+    font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 30px;
+text-align: center;
+color: #FFFFFF;
+  }
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
   }
 }

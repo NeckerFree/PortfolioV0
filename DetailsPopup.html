@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>PopUp</title>
+</head>
+
+<body>
+    <div class="modal">
+        <div class="detailsContainer">
+            <div class="heading">
+                <h6>{project.name}</h6> <a href="#"><img class="close" src="./icons/x.png" alt="close icon"></a>
+            </div>
+            <div class="snapshoot">
+            </div>
+            <div class="supportingText">
+                <p>{project.description}</p>
+            </div>
+            <div class="tags">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <p>html</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>Ruby on rails</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>css</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p>Github</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="buttons">
+                <a href="{project.liveVersion}" target="_blank"><button class="button">See Live<img src="./icons/Live-Icon.png" alt="Live Icon"></button></a>
+                <a href="{project.sourcelink}" target="_blank"><button class="button">See Source<img src="./icons/Source-Icon.png" alt="Source Icon"></button></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
