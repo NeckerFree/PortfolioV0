@@ -4,14 +4,18 @@
 <head>
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>PopUp</title>
+    <title>Project</title>
 </head>
 
 <body>
     <div class="modal">
         <div class="detailsContainer">
             <div class="heading">
-                <h6>{project.name}</h6> <a href="#"><img class="close" src="./icons/x.png" alt="close icon"></a>
+                <h6>{project.name}</h6> 
+                <a class="close" href="#">
+                    <img src="./icons/x.png" alt="close icon">
+                </a> 
+                <!-- <div class='close'>&#10006;</div> -->
             </div>
             <div class="snapshoot">
             </div>
@@ -22,22 +26,17 @@
                 <ul>
                     <li>
                         <a href="#">
-                            <p>html</p>
+                            <p>{project.technologies.t1}</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <p>Ruby on rails</p>
+                            <p>{project.technologies.t2}</p>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <p>css</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <p>Github</p>
+                            <p>{project.technologies.t3}</p>
                         </a>
                     </li>
                 </ul>
@@ -48,6 +47,7 @@
             </div>
         </div>
     </div>
+    <!-- <script src="./js/scriptCode.js"></script> -->
 </body>
 
 </html>

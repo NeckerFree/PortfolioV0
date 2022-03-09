@@ -603,31 +603,30 @@ footer {
   /* height: 106%; */
 }
 /*Details Popup*/
-.popup{
+/* .popup{
 position: absolute;
 display:none;
 top: 50px;
 margin-left: 100px;
 margin-right: 100px;
-/* left: 500px;
+ left: 500px;
 width: 1156px;
-height: 1176px; */
+height: 1176px; 
 width: 70%;
-background-color:#9390ff;
+background-color:#9390ff; 
 z-index:9999;
-
-
-}
+} */
 .popupContent{
-  background-color: red;
-  margin-left: auto;
-margin-right: auto;
+ position: fixed;
+ left: 25%;
+ /* width: 50%; */
+ z-index:9999;
 }
-.close{
+/* .close{
 position: absolute;
 cursor: pointer;
-color: black;
-}
+color: white;
+}  */
 /*Modal Popup*/
 /* .modal{
   width: 327px;
@@ -636,9 +635,10 @@ color: black;
   top: 51px;
 } */
 .detailsContainer{
-  background: rgba(255, 255, 255, 0.16);
+  /* background: rgba(255, 255, 255, 0.16); */
+  background: #191765;
   border: 1px solid #FFFFFF;
-  box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08);
+  box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08); 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -659,7 +659,7 @@ right: 0px;
 top: calc(50% - 40px/2 - 9px);
 border-radius: 8px;
 margin: 15px 15px;
-}
+} 
 .snapshoot{
   background: url(../images/SnapshootPortfolio.png) no-repeat;
   width: 279px;
@@ -870,15 +870,16 @@ color: #FFFFFF;
   }
   /*Modal Popup Media Query*/
 .modal{
-  /* width: 1156px;
-  height: 1176px; 
+  width: 1156px;
+  /* height: 1176px; 
   top:25%;
-  left:25%; */
+  left:25%;  */
   margin-left: auto;
 margin-right: auto;
   }
   .detailsContainer{
-  background: rgba(255, 255, 255, 0.16);
+    background: #191765;  
+  /* background: rgba(255, 255, 255, 0.16); */
   border: 1px solid #FFFFFF;
   box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08);
   }
