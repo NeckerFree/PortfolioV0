@@ -60,7 +60,7 @@ function closePopup() {
 function showPopup(projectId) {
   closePopup();
   const project = projects.find((pr) => pr.id === projectId);
-  fetch('DetailsPopup.html')
+  fetch('DetailsPopup.txt')
     .then((response) => response.text())
     .then((text) => {
       popupContent.innerHTML = text
