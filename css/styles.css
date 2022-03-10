@@ -53,8 +53,6 @@ a {
 
 ul {
   list-style: none;
-
-  /* height: 100%; */
 }
 
 .menu li a {
@@ -211,14 +209,14 @@ h5 {
   display: none;
 }
 
-h6{
+h6 {
   font-family: 'Roboto', sans-serif;
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 28px;
-display: flex;
-color: #FFFFFF;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  color: #fff;
 }
 
 .paragraph {
@@ -250,7 +248,6 @@ color: #FFFFFF;
 section > ul {
   display: flex;
   flex-direction: column;
-  list-style: none;
   color: #f5f5ff;
   align-items: flex-start;
   padding: 0 7.16667px;
@@ -276,7 +273,6 @@ section > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  list-style: none;
   margin: 0;
 }
 
@@ -357,6 +353,7 @@ li > p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
 }
 
 .gridItem1 {
@@ -400,27 +397,27 @@ li > p {
 .block ul {
   margin: 0;
   padding: 0;
-  list-style: none;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 50px;
 }
 
+/*
 .block ul li {
   text-align: center;
   flex-grow: 1;
   position: relative;
   border-right: 1px solid #81818c;
-}
+} */
 
 .socialLinks ul li {
   padding: 2px 5px;
 }
 
-.block ul li:last-child {
+/* .block ul li:last-child {
   border-right: none;
-}
+} */
 
 .formContent {
   display: flex;
@@ -454,7 +451,7 @@ label {
   margin-left: 0;
 }
 
-.block ul li p {
+.skill p {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -581,66 +578,69 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   width: 200px;
-  list-style: none;
   margin: 0;
   padding: 0;
   align-items: center;
 }
 
-#hamburguerLink ul {
-  list-style: none;
+/* Details Popup */
+.popupContent {
+  display: none;
+  position: fixed;
+  width: 90%;
+  height: 100%;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  z-index: 100;
 }
-/*Details Popup*/
-.popupContent{
- position: fixed;
- left: 25%;
- z-index:9999;
-}
-.detailsContainer{
-  background: #191765;
-  border: 1px solid #FFFFFF;
-  box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08); 
+
+.detailsContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid #fff;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
 }
-.heading{
+
+.heading {
   display: flex;
   justify-content: space-between;
   width: 90%;
   margin-left: 30px;
 }
 
-.close{
+.close {
   padding: 8px;
-position: static;
-width: 20px;
-height: 20px;
-right: 0px;
-top: calc(50% - 40px/2 - 9px);
-border-radius: 8px;
-margin: 15px 15px;
-} 
-.snapshoot{
+  position: static;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  top: calc(50% - 40px / 2 - 9px);
+  border-radius: 8px;
+  margin: 15px 15px;
+}
+
+.snapshoot {
   background: url(../images/SnapshootPortfolio.png) no-repeat;
   width: 279px;
   height: 181px;
 }
 
-.supportingText p{
+.supportingText p {
   font-family: 'Roboto', sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 24px;
-text-align: center;
-color: #FFFFFF;
-margin: 24px 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  margin: 24px 24px;
 }
 
 .tags ul {
   display: flex;
-  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -648,30 +648,45 @@ margin: 24px 24px;
 .tags ul li {
   text-align: center;
   border-right: 1px solid #81818c;
-  padding: 0px 10px 0px 10px;
+  padding: 0 10px 0 10px;
 }
 
-.tags ul li a p{
+.tags ul li a p {
   font-family: 'Poppins', sans-serif;
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 20px;
-color: #FFFFFF;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
 }
 
 .tags ul li:last-child {
   border-right: none;
 }
-.buttons{
+
+.buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
 }
-.buttons button{
+
+.buttons button {
   width: auto;
 }
+
+.containerSkils {
+  display: inline;
+}
+
+.skill {
+  float: left;
+  text-align: center;
+  flex-grow: 1;
+  position: relative;
+  border-right: 1px solid #81818c;
+}
+
 /* Media Query CSS */
 @media screen and (min-width: 992px) {
   #hamburguerLink {
@@ -828,49 +843,62 @@ color: #FFFFFF;
   .experience {
     width: auto;
   }
-  /*Modal Popup Media Query*/
-.modal{
-  width: 1156px;
-  /* height: 1176px; 
-  top:25%;
-  left:25%;  */
-  margin-left: auto;
-margin-right: auto;
+
+  /* Modal Popup Media Query */
+
+  .modal {
+    width: 1156px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .detailsContainer{
-    background: #191765;  
-  /* background: rgba(255, 255, 255, 0.16); */
-  border: 1px solid #FFFFFF;
-  box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08);
+
+  .detailsContainer {
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid #fff;
+    box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
   }
-  .snapshoot{
+
+  .snapshoot {
     background: url(../images/SnapshootPortfolio_Wide.png) no-repeat;
     width: 1108px;
     height: 505px;
   }
-  h6{
- font-family: 'Roboto', sans-serif;
-font-style: normal;
-font-weight: 500;
-font-size: 40px;
-line-height: 32px;
-display: flex;
-align-items: center;
-color: #FFFFFF;
-  }
-  .supportingText p{
+
+  h6 {
     font-family: 'Roboto', sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 30px;
-text-align: center;
-color: #FFFFFF;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #fff;
   }
-  .buttons{
+
+  .supportingText p {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .buttons {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 20px;
+  }
+
+  .popupContent {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    left: 0;
+    z-index: 100;
   }
 }
