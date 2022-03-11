@@ -56,11 +56,7 @@ link.addEventListener('click', togleMobile);
 
 form.addEventListener('submit', (event) => {
   if (storageAvailable('localStorage')) {
-    if (!localStorage.getItem('contactData')) {
       populateContactForm();
-    } else {
-      setContactForm();
-    }
   }
   else {
    alert ('Local Storage not avalailable');
