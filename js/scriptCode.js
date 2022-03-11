@@ -46,8 +46,8 @@ function populateContactForm() {
 
 function setContactForm(){
    const contactData=localStorage.getItem('contactData');
-   var data=JSON.stringify(contactData);
-   fullName.value = data.fullName;
+   var data=JSON.parse(contactData);
+   fullName.value = data.fullname;
    email.value = data.email;
   comments.value = data.comments;
 }
@@ -66,3 +66,14 @@ form.addEventListener('submit', (event) => {
    alert ('Local Storage not avalailable');
   }
 });
+
+window.addEventListener('load', (event) => {
+  if (storageAvailable('localStorage')) {
+    if (localStorage.getItem('contactData')) {
+      setContactForm();
+    }
+  }
+  else {
+   alert ('Local Storage not avalailable');
+  }
+} )
