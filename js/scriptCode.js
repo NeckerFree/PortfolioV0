@@ -36,6 +36,8 @@ projects.push({
   liveVersion: 'https://neckerfree.github.io/PortfolioV2/index.html',
   sourcelink: 'https://github.com/NeckerFree/PortfolioV2',
 });
+
+/* Declarations */
 const link = document.getElementById('hamburguerLink');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
@@ -43,6 +45,12 @@ const button3 = document.getElementById('button3');
 const button4 = document.getElementById('button4');
 const popup = document.querySelector('.popup');
 const popupContent = document.querySelector('.popupContent');
+// Input Validation:
+const form = document.getElementsByTagName('form')[0];
+const email = document.getElementById('email_address');
+const fullName = document.getElementById('full_name');
+const comments = document.getElementById('comments_area');
+const errorMessage = document.querySelector('span.error');
 
 function togleMobile() {
   link.classList.toggle('open');
@@ -51,7 +59,7 @@ function togleMobile() {
   const brand = document.querySelector('.nick');
   brand.classList.toggle('hideBrand');
 }
-
+/* Functions */
 function closePopup() {
   popupContent.style.display = 'none';
   popup.style.display = 'none';
@@ -77,8 +85,81 @@ function showPopup(projectId) {
   popup.style.display = 'block';
 }
 
+function showCommentsError() {
+  if (comments.validity.valueMissing) {
+    errorMessage.textContent = 'You need to enter comments.';
+  } else if (comments.validity.typeMismatch) {
+    errorMessage.textContent = 'Entered value for comments needs to be text.';
+  } else if (comments.validity.tooLong) {
+    errorMessage.textContent = `Comments should be at most ${comments.maxLength} characters; you entered ${comments.value.length}.`;
+  }
+  errorMessage.className = 'error active';
+}
+
+function showNameError() {
+  if (fullName.validity.valueMissing) {
+    errorMessage.textContent = 'You need to enter the name.';
+  } else if (fullName.validity.typeMismatch) {
+    errorMessage.textContent = 'Entered value for name needs to be text.';
+  } else if (fullName.validity.tooLong) {
+    errorMessage.textContent = `Name should be at most ${fullName.maxLength} characters; you entered ${fullName.value.length}.`;
+  }
+  errorMessage.className = 'error active';
+}
+
+function showEmailError() {
+  if (email.validity.valueMissing) {
+    errorMessage.textContent = 'You need to enter an e-mail address.';
+  } else if (email.validity.typeMismatch) {
+    errorMessage.textContent = 'Entered value needs to be an e-mail address.';
+  } if (email.validity.patternMismatch) {
+    errorMessage.textContent = 'Entered value needs to be an e-mail address in lower case';
+  }
+  errorMessage.className = 'error active';
+}
+/* Events */
 link.addEventListener('click', togleMobile);
 button1.addEventListener('click', showPopup.bind(null, 1), false);
 button2.addEventListener('click', showPopup.bind(null, 2), false);
 button3.addEventListener('click', showPopup.bind(null, 3), false);
 button4.addEventListener('click', showPopup.bind(null, 4), false);
+
+fullName.addEventListener('input', () => {
+  if (fullName.validity.valid) {
+    errorMessage.textContent = '';
+    errorMessage.className = 'error';
+  } else {
+    showNameError();
+  }
+});
+
+email.addEventListener('input', () => {
+  if (email.validity.valid) {
+    errorMessage.textContent = '';
+    errorMessage.className = 'error';
+  } else {
+    showEmailError();
+  }
+});
+
+comments.addEventListener('input', () => {
+  if (comments.validity.valid) {
+    errorMessage.textContent = '';
+    errorMessage.className = 'error';
+  } else {
+    showCommentsError();
+  }
+});
+
+form.addEventListener('submit', (event) => {
+  if (!fullName.validity.valid) {
+    showNameError();
+    event.preventDefault();
+  } else if (!email.validity.valid) {
+    showEmailError();
+    event.preventDefault();
+  } else if (!comments.validity.valid) {
+    showCommentsError();
+    event.preventDefault();
+  }
+});
