@@ -43,6 +43,9 @@ const button3 = document.getElementById('button3');
 const button4 = document.getElementById('button4');
 const popup = document.querySelector('.popup');
 const popupContent = document.querySelector('.popupContent');
+const container = document.querySelector('.grid-container');
+const headerContent = document.querySelector('header');
+const footerContent = document.querySelector('footer');
 
 function togleMobile() {
   link.classList.toggle('open');
@@ -51,13 +54,20 @@ function togleMobile() {
   const brand = document.querySelector('.nick');
   brand.classList.toggle('hideBrand');
 }
-
+function blurContent() {
+  container.classList.toggle('blurContent');
+  headerContent.classList.toggle('blurContent');
+  footerContent.classList.toggle('blurContent');
+}
 function closePopup() {
   popupContent.style.display = 'none';
   popup.style.display = 'none';
+  blurContent();
+  document.body.style.overflow = 'visible';
 }
 
 function showPopup(projectId) {
+  blurContent();
   closePopup();
   const project = projects.find((pr) => pr.id === projectId);
   fetch('DetailsPopup.txt')
@@ -74,7 +84,10 @@ function showPopup(projectId) {
         .replace('class="close"', 'class="close" onclick="closePopup()"');
     });
   popupContent.style.display = 'block';
+  popupContent.style.overflow = 'auto';
   popup.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  blurContent();
 }
 
 link.addEventListener('click', togleMobile);

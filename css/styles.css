@@ -403,21 +403,9 @@ li > p {
   height: 50px;
 }
 
-/*
-.block ul li {
-  text-align: center;
-  flex-grow: 1;
-  position: relative;
-  border-right: 1px solid #81818c;
-} */
-
 .socialLinks ul li {
   padding: 2px 5px;
 }
-
-/* .block ul li:last-child {
-  border-right: none;
-} */
 
 .formContent {
   display: flex;
@@ -687,6 +675,18 @@ footer {
   border-right: 1px solid #81818c;
 }
 
+.blurContent {
+  mix-blend-mode: multiply;
+  filter: blur(24px);
+}
+
+.modal {
+  width: 327px;
+  height: 837px;
+  left: 24px;
+  top: 51px;
+}
+
 /* Media Query CSS */
 @media screen and (min-width: 992px) {
   #hamburguerLink {
@@ -847,7 +847,8 @@ footer {
   /* Modal Popup Media Query */
 
   .modal {
-    width: 1156px;
+    width: 1200px;
+    height: 700px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -889,7 +890,7 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
   }
 
   .popupContent {
