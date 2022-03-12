@@ -37,9 +37,11 @@ function storageAvailable(type) {
 }
 
 function populateContactForm() {
-  const data = { fullname: fullName.value, email: email.value, comments: comments.value };
-  const contactData = JSON.stringify(data);
-  localStorage.setItem('contactData', contactData);
+  if (fullName.value.length > 0 && email.value.length > 0 && comments.value.length > 0) {
+    const data = { fullname: fullName.value, email: email.value, comments: comments.value };
+    const contactData = JSON.stringify(data);
+    localStorage.setItem('contactData', contactData);
+  }
 }
 
 function setContactForm() {
@@ -55,9 +57,13 @@ link.addEventListener('click', togleMobile);
 form.addEventListener('submit', () => {
   if (storageAvailable('localStorage')) {
     populateContactForm();
-  } else {
-    alert('Local Storage not avalailable');
-  }
+  } 
+});
+
+form.addEventListener('change', () => {
+  if (storageAvailable('localStorage')) {
+    populateContactForm();
+  } 
 });
 
 window.addEventListener('load', () => {
@@ -65,7 +71,5 @@ window.addEventListener('load', () => {
     if (localStorage.getItem('contactData')) {
       setContactForm();
     }
-  } else {
-    alert('Local Storage not avalailable');
-  }
+  } 
 });
