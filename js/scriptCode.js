@@ -45,13 +45,16 @@ const button3 = document.getElementById('button3');
 const button4 = document.getElementById('button4');
 const popup = document.querySelector('.popup');
 const popupContent = document.querySelector('.popupContent');
-// Input Validation:
+// Input Validation & Local Storage:
 const form = document.getElementsByTagName('form')[0];
 const email = document.getElementById('email_address');
 const fullName = document.getElementById('full_name');
 const comments = document.getElementById('comments_area');
 const errorMessage = document.querySelector('span.error');
 
+/**
+ * Mobile menu function
+ */
 function togleMobile() {
   link.classList.toggle('open');
   const menuImg = document.querySelector('.hamburguer');
@@ -59,7 +62,9 @@ function togleMobile() {
   const brand = document.querySelector('.nick');
   brand.classList.toggle('hideBrand');
 }
-/* Functions */
+/* 
+* Details Popup Functions 
+*/
 function closePopup() {
   popupContent.style.display = 'none';
   popup.style.display = 'none';
@@ -84,7 +89,9 @@ function showPopup(projectId) {
   popupContent.style.display = 'block';
   popup.style.display = 'block';
 }
-
+/**
+ * Validate Data functions
+ */
 function showCommentsError() {
   if (comments.validity.valueMissing) {
     errorMessage.textContent = 'You need to enter comments.';
@@ -117,6 +124,63 @@ function showEmailError() {
   }
   errorMessage.className = 'error active';
 }
+function ValidaStoreData(event) {
+  if (!fullName.validity.valid) {
+    showNameError();
+    event.preventDefault();
+  } else if (!email.validity.valid) {
+    showEmailError();
+    event.preventDefault();
+  } else if (!comments.validity.valid) {
+    showCommentsError();
+    event.preventDefault();
+  }
+  if (storageAvailable('localStorage')) {
+    populateContactForm();
+  }
+}
+/**
+ * Local storage functions
+ */
+ function storageAvailable(type) {
+  let storage;
+  try {
+    storage = window[type];
+    const x = '__storage_test__';
+    storage.setItem(x, x);
+    storage.removeItem(x);
+    return true;
+  } catch (e) {
+    return e instanceof DOMException && (
+    // everything except Firefox
+      e.code === 22
+          // Firefox
+          || e.code === 1014
+          // test name field too, because code might not be present
+          // everything except Firefox
+          || e.name === 'QuotaExceededError'
+          // Firefox
+          || e.name === 'NS_ERROR_DOM_QUOTA_REACHED')
+          // acknowledge QuotaExceededError only if there's something already stored
+          && (storage && storage.length !== 0);
+  }
+}
+
+function populateContactForm() {
+    const data = { fullname: fullName.value, email: email.value, comments: comments.value };
+    const contactData = JSON.stringify(data);
+    localStorage.setItem('contactData', contactData);
+}
+
+function setContactForm() {
+  const contactData = localStorage.getItem('contactData');
+  const data = JSON.parse(contactData);
+  fullName.value = data.fullname;
+  email.value = data.email;
+  comments.value = data.comments;
+}
+
+
 /* Events */
 link.addEventListener('click', togleMobile);
 button1.addEventListener('click', showPopup.bind(null, 1), false);
@@ -152,14 +216,19 @@ comments.addEventListener('input', () => {
 });
 
 form.addEventListener('submit', (event) => {
-  if (!fullName.validity.valid) {
-    showNameError();
-    event.preventDefault();
-  } else if (!email.validity.valid) {
-    showEmailError();
-    event.preventDefault();
-  } else if (!comments.validity.valid) {
-    showCommentsError();
-    event.preventDefault();
+  ValidaStoreData(event);
+});
+
+form.addEventListener('change', (event) => {
+  ValidaStoreData(event);
+});
+
+window.addEventListener('load', () => {
+  if (storageAvailable('localStorage')) {
+    if (localStorage.getItem('contactData')) {
+      setContactForm();
+    }
   }
 });
+
+

@@ -403,21 +403,9 @@ li > p {
   height: 50px;
 }
 
-/*
-.block ul li {
-  text-align: center;
-  flex-grow: 1;
-  position: relative;
-  border-right: 1px solid #81818c;
-} */
-
 .socialLinks ul li {
   padding: 2px 5px;
 }
-
-/* .block ul li:last-child {
-  border-right: none;
-} */
 
 .formContent {
   display: flex;
