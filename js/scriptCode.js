@@ -36,6 +36,47 @@ projects.push({
   liveVersion: 'https://neckerfree.github.io/PortfolioV2/index.html',
   sourcelink: 'https://github.com/NeckerFree/PortfolioV2',
 });
+
+/**
+ * Details Popup
+ */
+const detailsPopup = `
+<div class="detailsContainer">
+<div class="heading">
+<h6>{project.name}</h6> 
+<a class="close" href="#">
+<img src="./icons/x.png" alt="close icon">
+</a> 
+</div>
+<div class="snapshoot">
+</div>
+<div class="supportingText">
+<p>{project.description}</p>
+</div>
+<div class="tags">
+<ul>
+<li>
+<a href="#">
+<p>{project.technologies.t1}</p>
+</a>
+</li>
+<li>
+<a href="#">
+<p>{project.technologies.t2}</p>
+</a>
+</li>
+<li>
+<a href="#">
+<p>{project.technologies.t3}</p>
+</a>
+</li>
+</ul>
+</div>
+<div class="buttons">
+<a href="{project.liveVersion}" target="_blank"><button class="button">See Live<img src="./icons/Live-Icon.png" alt="Live Icon"></button></a>
+<a href="{project.sourcelink}" target="_blank"><button class="button">See Source<img src="./icons/Source-Icon.png" alt="Source Icon"></button></a>
+</div>
+</div>`;
 const link = document.getElementById('hamburguerLink');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
@@ -69,19 +110,15 @@ function showPopup(projectId) {
   blurContent();
   closePopup();
   const project = projects.find((pr) => pr.id === projectId);
-  fetch('DetailsPopup.txt')
-    .then((response) => response.text())
-    .then((text) => {
-      popupContent.innerHTML = text
-        .replace('{project.name}', project.name)
-        .replace('{project.description}', project.description)
-        .replace('{project.liveVersion}', project.liveVersion)
-        .replace('{project.sourcelink}', project.sourcelink)
-        .replace('{project.technologies.t1}', project.technologies.t1)
-        .replace('{project.technologies.t2}', project.technologies.t2)
-        .replace('{project.technologies.t3}', project.technologies.t3)
-        .replace('class="close"', 'class="close" onclick="closePopup()"');
-    });
+  popupContent.innerHTML = detailsPopup
+    .replace('{project.name}', project.name)
+    .replace('{project.description}', project.description)
+    .replace('{project.liveVersion}', project.liveVersion)
+    .replace('{project.sourcelink}', project.sourcelink)
+    .replace('{project.technologies.t1}', project.technologies.t1)
+    .replace('{project.technologies.t2}', project.technologies.t2)
+    .replace('{project.technologies.t3}', project.technologies.t3)
+    .replace('class="close"', 'class="close" onclick="closePopup()"');
   popupContent.style.display = 'block';
   popupContent.style.overflow = 'auto';
   document.body.style.overflow = 'hidden';
