@@ -472,7 +472,6 @@ label {
 .submitButton {
   background: #7d73fc;
   color: #edecff;
- 
   padding: 12px;
   height: 48px;
   font-family: 'Roboto', sans-serif;
@@ -727,8 +726,9 @@ button img {
   margin-right: auto;
   margin-top: 5%;
   margin-bottom: 5%;
+}
 
- /* Email validation */
+/* Email validation */
 input[type=email] {
   -webkit-appearance: none;
   appearance: none;
