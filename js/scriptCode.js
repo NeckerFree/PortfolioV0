@@ -57,13 +57,13 @@ link.addEventListener('click', togleMobile);
 form.addEventListener('submit', () => {
   if (storageAvailable('localStorage')) {
     populateContactForm();
-  } 
+  }
 });
 
 form.addEventListener('change', () => {
   if (storageAvailable('localStorage')) {
     populateContactForm();
-  } 
+  }
 });
 
 window.addEventListener('load', () => {
@@ -71,5 +71,5 @@ window.addEventListener('load', () => {
     if (localStorage.getItem('contactData')) {
       setContactForm();
     }
-  } 
+  }
 });
