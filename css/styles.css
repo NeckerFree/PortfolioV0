@@ -53,8 +53,6 @@ a {
 
 ul {
   list-style: none;
-
-  /* height: 100%; */
 }
 
 .menu li a {
@@ -193,8 +191,6 @@ h4 {
   line-height: 52px;
   color: #9490ff;
   align-items: flex-start;
-
-  /* text-align: left; */
   padding-left: 24px;
   text-transform: uppercase;
 }
@@ -213,6 +209,16 @@ h5 {
   display: none;
 }
 
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  color: #fff;
+}
+
 .paragraph {
   margin-top: 80px;
   font-family: 'Roboto', sans-serif;
@@ -223,9 +229,6 @@ h5 {
   text-align: justify;
   line-height: 28px;
   align-self: auto;
-
-  /* padding-left: 150px;
-  padding-right: 150px; */
   margin-left: 24px;
   margin-right: 24px;
 }
@@ -245,7 +248,6 @@ h5 {
 section > ul {
   display: flex;
   flex-direction: column;
-  list-style: none;
   color: #f5f5ff;
   align-items: flex-start;
   padding: 0 7.16667px;
@@ -271,9 +273,6 @@ section > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
-  /* width: 180px; */
-  list-style: none;
   margin: 0;
 }
 
@@ -298,8 +297,6 @@ li > p {
   margin-left: 70px;
   justify-content: left;
   width: 250px;
-
-  /* width: 380px; */
 }
 
 .box {
@@ -356,8 +353,7 @@ li > p {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  /* margin: 88px 142px 88px 142px; */
+  margin-top: 50px;
 }
 
 .gridItem1 {
@@ -401,26 +397,14 @@ li > p {
 .block ul {
   margin: 0;
   padding: 0;
-  list-style: none;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 50px;
 }
 
-.block ul li {
-  text-align: center;
-  flex-grow: 1;
-  position: relative;
-  border-right: 1px solid #81818c;
-}
-
 .socialLinks ul li {
   padding: 2px 5px;
-}
-
-.block ul li:last-child {
-  border-right: none;
 }
 
 .formContent {
@@ -439,10 +423,6 @@ li > p {
   line-height: 24px;
   text-align: center;
   color: #f5f5ff;
-
-  /* margin: 0 24px 0 30px; */
-
-  /* width: 340px; */
   height: 105px;
   top: 59px;
 }
@@ -459,7 +439,7 @@ label {
   margin-left: 0;
 }
 
-.block ul li p {
+.skill p {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -586,16 +566,161 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   width: 200px;
-  list-style: none;
   margin: 0;
   padding: 0;
   align-items: center;
 }
 
-#hamburguerLink ul {
-  list-style: none;
+/* Details Popup */
+.popupContent {
+  display: none;
+  position: fixed;
+  width: 90%;
+  height: 100%;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  z-index: 100;
+}
 
-  /* height: 106%; */
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid #fff;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-left: 30px;
+}
+
+.close {
+  padding: 8px;
+  position: static;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  top: calc(50% - 40px / 2 - 9px);
+  border-radius: 8px;
+  margin: 15px 15px;
+}
+
+.snapshoot {
+  background: url(../images/SnapshootPortfolio.png) no-repeat;
+  width: 279px;
+  height: 181px;
+}
+
+.supportingText p {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  margin: 24px 24px;
+}
+
+.tags ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.tags ul li {
+  text-align: center;
+  border-right: 1px solid #81818c;
+  padding: 0 10px 0 10px;
+}
+
+.tags ul li a p {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.tags ul li:last-child {
+  border-right: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  width: auto;
+}
+
+.containerSkils {
+  display: inline;
+}
+
+.skill {
+  float: left;
+  text-align: center;
+  flex-grow: 1;
+  position: relative;
+  border-right: 1px solid #81818c;
+}
+
+/* Email validation */
+input[type=email] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  border: 1px solid #333;
+  margin: 0;
+  font-family: inherit;
+  font-size: 90%;
+  box-sizing: border-box;
+}
+
+textarea:invalid {
+  border-color: red;
+  background-color: #fdd;
+}
+
+input:invalid {
+  border-color: red;
+  background-color: #fdd;
+}
+
+textarea:focus:invalid {
+  outline: none;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+.error {
+  width: 100%;
+  padding-left: 22px;
+  background-color: rgb(253, 84, 84);
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: black;
+}
+
+.error.active {
+  padding-left: 22px;
 }
 
 /* Media Query CSS */
@@ -753,5 +878,63 @@ footer {
 
   .experience {
     width: auto;
+  }
+
+  /* Modal Popup Media Query */
+
+  .modal {
+    width: 1156px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .detailsContainer {
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid #fff;
+    box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  }
+
+  .snapshoot {
+    background: url(../images/SnapshootPortfolio_Wide.png) no-repeat;
+    width: 1108px;
+    height: 505px;
+  }
+
+  h6 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+
+  .supportingText p {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .popupContent {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 10%;
+    left: 0;
+    z-index: 100;
   }
 }
