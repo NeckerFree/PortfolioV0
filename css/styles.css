@@ -217,6 +217,8 @@ h6 {
   line-height: 28px;
   display: flex;
   color: #fff;
+   margin-top: 20px; 
+   margin-bottom: 20px; 
 }
 
 .paragraph {
@@ -354,6 +356,8 @@ li > p {
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .gridItem1 {
@@ -389,8 +393,8 @@ li > p {
   font-size: 20px;
   line-height: 28px;
   text-align: justify;
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 10px;
+  margin-right: 10px;
   color: #dcdce8;
 }
 
@@ -447,19 +451,25 @@ label {
   line-height: 20px;
   color: #fff;
 }
+.skill a p{
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
-button {
+.block button {
   background: #7d73fc;
   color: #edecff;
   width: 89px;
-  height: 48px;
+  margin-left: 24px;
+  padding: 12px;
+width: 108px;
+height: 48px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 24px;
   margin-top: 20px;
-  margin-left: 24px;
   border: 0;
 }
 
@@ -575,27 +585,40 @@ footer {
 .popupContent {
   display: none;
   position: fixed;
-  width: 90%;
-  height: 100%;
-  top: 5%;
-  left: 5%;
-  right: 5%;
+  height: 100%; 
+  width: 100%;
+  /* width: 80%; 
+  top: 10%;
+  left: 10%;
+  right: 10%;*/
   z-index: 100;
+  border: 1px solid red;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .detailsContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  
   background: rgba(255, 255, 255, 0.16);
   border: 1px solid #fff;
   box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
-}
+  border: 1px solid rgb(11, 48, 11);
+  width: 80%; 
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    border: 1px solid green;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: left;
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
 
 .heading {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  /* width: 90%; */
   margin-left: 30px;
 }
 
@@ -611,9 +634,11 @@ footer {
 }
 
 .snapshoot {
-  background: url(../images/SnapshootPortfolio.png) no-repeat;
-  width: 279px;
+  background: url(../images/SnapshootPortfolio.png) center no-repeat;
+  margin-left:  24px;
+  margin-right: 24px;
   height: 181px;
+  
 }
 
 .supportingText p {
@@ -624,13 +649,14 @@ footer {
   line-height: 24px;
   text-align: center;
   color: #fff;
-  margin: 24px 24px;
+  margin: 24px 27%
 }
 
 .tags ul {
   display: flex;
   margin: 0;
-  padding: 0;
+  padding-left: 0;
+  justify-content: center;
 }
 
 .tags ul li {
@@ -639,6 +665,10 @@ footer {
   padding: 0 10px 0 10px;
 }
 
+.tags ul li:first-child {
+  border-left: 1px solid #81818c;
+} 
+
 .tags ul li a p {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -646,10 +676,6 @@ footer {
   font-size: 15px;
   line-height: 20px;
   color: #fff;
-}
-
-.tags ul li:last-child {
-  border-right: none;
 }
 
 .buttons {
@@ -661,6 +687,19 @@ footer {
 
 .buttons button {
   width: auto;
+  background: #7D73FC;
+  color: #edecff;  
+
+  width: 89px;
+  padding: 5px;
+  height: 48px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  margin-top: 20px;
+  border: 0;
 }
 
 .containerSkils {
@@ -681,10 +720,16 @@ footer {
 }
 
 .modal {
-  width: 327px;
-  height: 837px;
-  left: 24px;
-  top: 51px;
+  width: 95%; /*width: 327px;*/
+  /*height: 837px; */
+  /* left: 24px; */
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+ 
+  border: 1px solid green;
 }
 
 /* Media Query CSS */
@@ -788,6 +833,8 @@ footer {
     font-size: 20px;
     line-height: 28px;
     color: #dfe1e6;
+    margin-left: 24px;
+  margin-right: 24px;
   }
 
   .block ul {
@@ -836,33 +883,62 @@ footer {
     text-transform: none;
   }
 
-  button {
+  .block button {
     background: #9390ff;
+    margin-left: 24px;
   }
 
+  .buttons button {
+       background: #7D73FC;
+    margin-left: 24px;
+      display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 12px;
+width: 108px;
+height: 48px;
+left: calc(50% - 108px/2 - 103px);
+bottom: 90px;
+background: #7D73FC;
+box-shadow: 0px 8px 16px rgba(125, 115, 252, 0.48);
+  }
   .experience {
     width: auto;
   }
 
   /* Modal Popup Media Query */
-
-  .modal {
-    width: 1200px;
-    height: 700px;
+ 
+  /* .modal {
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
-  }
+    border: 1px solid green;
+  }  */
 
   .detailsContainer {
     background: rgba(255, 255, 255, 0.16);
     border: 1px solid #fff;
     box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
-  }
+    width: 80%; 
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    border: 1px solid green;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: left;
+     margin-top: 3%; 
+  } 
 
   .snapshoot {
-    background: url(../images/SnapshootPortfolio_Wide.png) no-repeat;
-    width: 1108px;
-    height: 505px;
+    background: url(../images/SnapshootPortfolio_Wide.png) center no-repeat ;
+    /* width: 1108px;
+    height: 505px; */ 
+    width: 90%; 
+    height: 505px; 
+    border: 1px solid yellow;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   h6 {
@@ -874,6 +950,7 @@ footer {
     display: flex;
     align-items: center;
     color: #fff;
+    top: 60px;
   }
 
   .supportingText p {
@@ -882,24 +959,28 @@ footer {
     font-weight: normal;
     font-size: 16px;
     line-height: 30px;
-    text-align: center;
-    color: #fff;
+    
+    text-align: justify;
+    
   }
 
   .buttons {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-bottom: 70px;
+    justify-content: center;
   }
 
   .popupContent {
     display: none;
     position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 10%;
-    left: 0;
+     width: 100%; 
+     height: 100%; 
+     /* top: 10%; */
+    /*bottom: 10%; */
+    /* left: 0; */
     z-index: 100;
+    border: 1px solid red;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

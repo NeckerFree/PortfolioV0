@@ -1,5 +1,4 @@
-    <div class="modal">
-        <div class="detailsContainer">
+            <div class="detailsContainer">
             <div class="heading">
                 <h6>{project.name}</h6> 
                 <a class="close" href="#">
@@ -36,5 +35,5 @@
                 <a href="{project.sourcelink}" target="_blank"><button class="button">See Source<img src="./icons/Source-Icon.png" alt="Source Icon"></button></a>
             </div>
         </div>
-    </div>
+    
    

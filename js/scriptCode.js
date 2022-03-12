@@ -41,7 +41,7 @@ const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
 const button3 = document.getElementById('button3');
 const button4 = document.getElementById('button4');
-const popup = document.querySelector('.popup');
+// const popupDelete = document.querySelector('.popup');
 const popupContent = document.querySelector('.popupContent');
 const container = document.querySelector('.grid-container');
 const headerContent = document.querySelector('header');
@@ -61,7 +61,6 @@ function blurContent() {
 }
 function closePopup() {
   popupContent.style.display = 'none';
-  popup.style.display = 'none';
   blurContent();
   document.body.style.overflow = 'visible';
 }
@@ -85,7 +84,6 @@ function showPopup(projectId) {
     });
   popupContent.style.display = 'block';
   popupContent.style.overflow = 'auto';
-  popup.style.display = 'block';
   document.body.style.overflow = 'hidden';
   blurContent();
 }
