@@ -217,6 +217,8 @@ h6 {
   line-height: 28px;
   display: flex;
   color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .paragraph {
@@ -354,6 +356,8 @@ li > p {
   flex-direction: column;
   align-items: center;
   margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .gridItem1 {
@@ -389,8 +393,8 @@ li > p {
   font-size: 20px;
   line-height: 28px;
   text-align: justify;
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 10px;
+  margin-right: 10px;
   color: #dcdce8;
 }
 
@@ -448,10 +452,27 @@ label {
   color: #fff;
 }
 
-button {
+.supportingText p {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  margin: 24px 27%;
+}
+
+.skill a p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.block button,
+.submitButton {
   background: #7d73fc;
   color: #edecff;
-  width: 89px;
+  padding: 12px;
   height: 48px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -459,8 +480,8 @@ button {
   font-size: 12px;
   line-height: 24px;
   margin-top: 20px;
-  margin-left: 24px;
   border: 0;
+  width: 89px;
 }
 
 .submitButton::before {
@@ -575,27 +596,31 @@ footer {
 .popupContent {
   display: none;
   position: fixed;
-  width: 90%;
   height: 100%;
-  top: 5%;
-  left: 5%;
-  right: 5%;
+  width: 100%;
   z-index: 100;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .detailsContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: rgba(255, 255, 255, 0.16);
   border: 1px solid #fff;
   box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: initial;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 .heading {
   display: flex;
   justify-content: space-between;
-  width: 90%;
   margin-left: 30px;
 }
 
@@ -611,32 +636,27 @@ footer {
 }
 
 .snapshoot {
-  background: url(../images/SnapshootPortfolio.png) no-repeat;
-  width: 279px;
+  background: url(../images/SnapshootPortfolio.png) center no-repeat;
+  margin-left: 24px;
+  margin-right: 24px;
   height: 181px;
-}
-
-.supportingText p {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  color: #fff;
-  margin: 24px 24px;
 }
 
 .tags ul {
   display: flex;
   margin: 0;
-  padding: 0;
+  padding-left: 0;
+  justify-content: center;
 }
 
 .tags ul li {
   text-align: center;
   border-right: 1px solid #81818c;
   padding: 0 10px 0 10px;
+}
+
+.tags ul li:first-child {
+  border-left: 1px solid #81818c;
 }
 
 .tags ul li a p {
@@ -648,10 +668,6 @@ footer {
   color: #fff;
 }
 
-.tags ul li:last-child {
-  border-right: none;
-}
-
 .buttons {
   display: flex;
   flex-direction: column;
@@ -661,6 +677,29 @@ footer {
 
 .buttons button {
   width: auto;
+  background: #7d73fc;
+  color: #edecff;
+  padding: 5px;
+  height: 48px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  margin-top: 20px;
+  border: 0;
+}
+
+.buttons button:hover {
+  box-shadow: 0 8px 16px rgba(125, 115, 252, 0.48);
+}
+
+.buttons button:active {
+  background: #5e42d7;
+}
+
+button img {
+  margin-left: 6px;
 }
 
 .containerSkils {
@@ -673,6 +712,20 @@ footer {
   flex-grow: 1;
   position: relative;
   border-right: 1px solid #81818c;
+}
+
+.blurContent {
+  mix-blend-mode: multiply;
+  filter: blur(24px);
+}
+
+.modal {
+  width: 95%;
+  height: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 /* Email validation */
@@ -824,6 +877,8 @@ input:focus:invalid {
     font-size: 20px;
     line-height: 28px;
     color: #dfe1e6;
+    margin-left: 24px;
+    margin-right: 24px;
   }
 
   .block ul {
@@ -872,8 +927,41 @@ input:focus:invalid {
     text-transform: none;
   }
 
-  button {
-    background: #9390ff;
+  .block button {
+    background: #7d73fc;
+    color: #edecff;
+    margin-left: 24px;
+    padding: 12px;
+    height: 48px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    margin-top: 20px;
+    border: 0;
+    width: 89px;
+  }
+
+  .buttons button {
+    margin-left: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 12px;
+    height: 48px;
+    left: calc(50% - 108px / 2 - 103px);
+    bottom: 90px;
+    background: #7d73fc;
+    box-shadow: 0 8px 16px rgba(125, 115, 252, 0.48);
+  }
+
+  .buttons button:hover {
+    box-shadow: 0 8px 16px rgba(125, 115, 252, 0.48);
+  }
+
+  .buttons button:active {
+    background: #5e42d7;
   }
 
   .experience {
@@ -882,22 +970,26 @@ input:focus:invalid {
 
   /* Modal Popup Media Query */
 
-  .modal {
-    width: 1156px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .detailsContainer {
     background: rgba(255, 255, 255, 0.16);
     border: 1px solid #fff;
     box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    align-items: initial;
   }
 
   .snapshoot {
-    background: url(../images/SnapshootPortfolio_Wide.png) no-repeat;
-    width: 1108px;
+    background: url(../images/SnapshootPortfolio_Wide.png) center no-repeat;
+    width: 90%;
     height: 505px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   h6 {
@@ -909,6 +1001,7 @@ input:focus:invalid {
     display: flex;
     align-items: center;
     color: #fff;
+    top: 60px;
   }
 
   .supportingText p {
@@ -917,15 +1010,13 @@ input:focus:invalid {
     font-weight: normal;
     font-size: 16px;
     line-height: 30px;
-    text-align: center;
-    color: #fff;
+    text-align: justify;
   }
 
   .buttons {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-bottom: 20px;
+    justify-content: center;
   }
 
   .popupContent {
@@ -933,8 +1024,8 @@ input:focus:invalid {
     position: fixed;
     width: 100%;
     height: 100%;
-    top: 10%;
-    left: 0;
     z-index: 100;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
