@@ -62,8 +62,8 @@ function togleMobile() {
   const brand = document.querySelector('.nick');
   brand.classList.toggle('hideBrand');
 }
-/* 
-* Details Popup Functions 
+/*
+* Details Popup Functions
 */
 function closePopup() {
   popupContent.style.display = 'none';
@@ -124,25 +124,11 @@ function showEmailError() {
   }
   errorMessage.className = 'error active';
 }
-function ValidaStoreData(event) {
-  if (!fullName.validity.valid) {
-    showNameError();
-    event.preventDefault();
-  } else if (!email.validity.valid) {
-    showEmailError();
-    event.preventDefault();
-  } else if (!comments.validity.valid) {
-    showCommentsError();
-    event.preventDefault();
-  }
-  if (storageAvailable('localStorage')) {
-    populateContactForm();
-  }
-}
+
 /**
  * Local storage functions
  */
- function storageAvailable(type) {
+function storageAvailable(type) {
   let storage;
   try {
     storage = window[type];
@@ -167,9 +153,9 @@ function ValidaStoreData(event) {
 }
 
 function populateContactForm() {
-    const data = { fullname: fullName.value, email: email.value, comments: comments.value };
-    const contactData = JSON.stringify(data);
-    localStorage.setItem('contactData', contactData);
+  const data = { fullname: fullName.value, email: email.value, comments: comments.value };
+  const contactData = JSON.stringify(data);
+  localStorage.setItem('contactData', contactData);
 }
 
 function setContactForm() {
@@ -180,6 +166,21 @@ function setContactForm() {
   comments.value = data.comments;
 }
 
+function ValidaStoreData(event) {
+  if (!fullName.validity.valid) {
+    showNameError();
+    event.preventDefault();
+  } else if (!email.validity.valid) {
+    showEmailError();
+    event.preventDefault();
+  } else if (!comments.validity.valid) {
+    showCommentsError();
+    event.preventDefault();
+  }
+  if (storageAvailable('localStorage')) {
+    populateContactForm();
+  }
+}
 
 /* Events */
 link.addEventListener('click', togleMobile);
@@ -230,5 +231,3 @@ window.addEventListener('load', () => {
     }
   }
 });
-
-
