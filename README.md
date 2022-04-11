@@ -7,8 +7,7 @@
 
 ## Built With
 
-- Major languages
-- Frameworks
+- JavaScript
 - Technologies used: HTML, CSS
 
 ## Live Demo 
