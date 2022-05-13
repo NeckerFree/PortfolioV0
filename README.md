@@ -24,7 +24,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 - Clone the repository running this command in Git:
-  git clone https://github.com/NeckerFree/PortfolioV2
+  git clone https://github.com/NeckerFree/Portfolio
 
 ### Install
 - Change to the corresponding branch (In this case to test the pull request):
