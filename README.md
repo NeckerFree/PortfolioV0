@@ -12,7 +12,7 @@
 
 ## Live Demo 
 
-[Portfolio](https://neckerfree.github.io/PortfolioV2/)
+[Portfolio](https://neckerfree.github.io/Portfolio/)
 
 ## Getting Started
 
